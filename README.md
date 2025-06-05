@@ -1,4 +1,4 @@
-# ExtractMe
+# ExtractMe 📄🔍
 
 ExtractMe es una herramienta para extraer tablas de archivos PDF mediante el modelo TATR (TAble TRansformer) de Microsoft. Se compone por un backend en **Flask** y una interfaz en **Streamlit**.
 
