@@ -1,8 +1,9 @@
 # ExtractMe
 
-ExtractMe es una herramienta para extraer tablas de archivos PDF mediante modelos de reconocimiento y OCR. Incluye un backend en **Flask** y una interfaz en **Streamlit**.
+ExtractMe es una herramienta para extraer tablas de archivos PDF mediante el modelo TATR (TAble TRansformer) de Microsoft. Se compone por un backend en **Flask** y una interfaz en **Streamlit**.
 
-## Instalación
+## Instalación con pip
+> Recomendación usar uv.
 
 1. Crea y activa un entorno virtual de Python.
 2. Instala las dependencias necesarias:
@@ -10,6 +11,19 @@ ExtractMe es una herramienta para extraer tablas de archivos PDF mediante modelo
 ```bash
 pip install -r requirements.txt           # dependencias para la interfaz Streamlit
 pip install -r requirements_backend.txt   # dependencias para la API
+```
+## Instalación con uv
+
+1. Instala uv si no lo tienes.
+
+- MacOS/Linux: ```curl -LsSf https://astral.sh/uv/install.sh | sh```
+- Windows: ```powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"```
+
+2. instala las dependencias.
+   
+```bash
+uv pip install -r requirements.txt
+uv pip install -r requirements_backend.txt 
 ```
 
 ## Configuración
@@ -28,7 +42,7 @@ UPLOAD_ENDPOINT=http://localhost:5000/upload
 python api.py
 ```
 
-2. En otra terminal, lanza la aplicación Streamlit:
+2. Abre otra terminal, y ejecuta la aplicación Streamlit:
 
 ```bash
 streamlit run app.py
